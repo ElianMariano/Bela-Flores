@@ -1,0 +1,51 @@
+header {
+    background-color: var(--color-primary);
+    height: 25vh;
+    margin: 0;
+    vertical-align: middle;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 'image image image tools tools';
+}
+
+h3 {
+    margin: 5px;
+}
+
+.div-category {
+    padding: 0;
+    grid-area: image;
+    vertical-align: middle;
+    display: inline-flex;
+}
+
+.div-tools {
+    padding-right: 2vw;
+    text-align: right;
+    grid-area: tools;
+}
+
+.logo-header {
+    margin: 1vh 1vh 1vh 1vh;
+    margin-right: 4vw;
+    width: 20%;
+}
+
+.category-title {
+    color: var(--color-dark-green);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 10vh;
+    margin-left: 2vw;
+}
+
+.category-title-grey {
+    color: var(--color-header-grey);
+    font-family: Roboto, sans-serif;
+    font-weight: medium;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 10vh;
+}

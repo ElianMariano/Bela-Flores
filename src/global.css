@@ -1,0 +1,30 @@
+:root {
+  --color-background: #F1F6F4;
+  --color-primary: #C5EEDD;
+  --color-green: #2C8D30;
+  --color-dark-green: #094D0C;
+  --color-grey: #6F6F6F;
+  --color-header-grey: #606060;
+  --white: #FFFFFF;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body{
+  background-color: var(--color-background);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
