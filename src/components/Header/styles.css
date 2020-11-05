@@ -12,6 +12,11 @@ h3 {
     margin: 5px;
 }
 
+button {
+    background-color: none;
+    border-width: 0px;
+}
+
 .div-category {
     padding: 0;
     grid-area: image;
