@@ -17,6 +17,8 @@ const Image = styled.img`
 `;
 
 const ImageWrapper = styled.a`
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     text-align: center;
 `;
