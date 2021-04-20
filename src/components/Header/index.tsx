@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import {Link, useLocation} from 'react-router-dom'
+
 import SearchInput from '../SearchInput';
 
 import Logo from '../../assets/logo.png';
 import './styles.css';
 
 function Header(){
+    const location = useLocation();
     const [searchShow, setSearchShow] = useState(false);
 
     return (
@@ -13,19 +16,22 @@ function Header(){
                 <div className="div-category">
                     <img className="logo-header" src={Logo} alt="Bela Flores" />
 
-                    <a href="/" onClick={(e) => e.preventDefault()}>
-                        <h3 className="category-title">PRODUTOS</h3>
-                    </a>
+                    {location.pathname !== '/' &&
+                        (
+                            <Link to="/">
+                                <h3 className="category-title">HOME</h3>
+                            </Link>
+                        )}
 
-                    <a href="/" onClick={(e) => e.preventDefault()}>
+                    <Link to="/category">
                         <h3 className="category-title">PRODUTOS</h3>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="div-tools">
-                    <a href="/" onClick={(e) => e.preventDefault()}>
+                    <Link to="/login">
                         <h3 className="category-title-grey">CONTA</h3>
-                    </a>
+                    </Link>
 
                     <a href="/" onClick={(e) => {
                         e.preventDefault();
@@ -34,9 +40,9 @@ function Header(){
                         <h3 className="category-title-grey">PESQUISAR</h3>
                     </a>
 
-                    <a href="/" onClick={(e) => e.preventDefault()}>
+                    <Link to="/cart">
                         <h3 className="category-title">CARRINHO(0)</h3>
-                    </a>
+                    </Link>
                 </div>
             </header>
 
