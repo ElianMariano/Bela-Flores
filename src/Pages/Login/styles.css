@@ -1,0 +1,40 @@
+.login-container {
+    background-color: var(--color-primary);
+    width: 60%;
+    border-radius: 0.8vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh 2vh 1vh 2vh;
+}
+
+.login-title {
+    color: var(--color-account-title);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vh;
+    margin-bottom: 2vh;
+}
+
+.create-account-text,
+.forgot-password-text {
+    margin: 0;
+    color: var(--color-dark-green);
+    font-size: 2.4vh;
+    font-weight: bold;
+}
+
+.login-container .bottom-container button,
+.forgot-password-text{
+    display: inline-block;
+}
+
+.login-container .bottom-container button {
+    margin-top: 2vh;
+}
+
+.forgot-password-text {
+    margin-top: 2vh;
+    float: right;
+}

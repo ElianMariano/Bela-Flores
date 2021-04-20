@@ -1,0 +1,43 @@
+.account-container {
+    background-color: var(--color-primary);
+    width: 90%;
+    border-radius: 0.8vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh 2vh 1vh 2vh;
+}
+
+.account-title {
+    color: var(--color-account-title);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vh;
+    margin-bottom: 2vh;
+}
+
+.account-container button {
+    margin-top: 2vh;
+    align-items: right;
+}
+
+.address-container {
+    background-color: var(--color-address);
+    width: 95%;
+    /* height: 600px; */
+    border-radius: 0.8vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.8vh 1.5vh 0.8vh 1.5vh;
+}
+
+.address-title {
+    color: var(--color-account-title);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 3.2vh;
+    margin: 3vh 3vh 3vh 1vh;
+}

@@ -1,0 +1,36 @@
+.quantity-picker {
+    background-color: var(--white);
+    border-radius: 1.5vh;
+    width: 95%;
+    height: 8vh;
+    padding: 0 0 0 0;
+    align-self: center;
+}
+
+.picker-quantity,
+.picker-button {
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+.picker-quantity {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 2.8vh;
+    text-align: center;
+    width: 40%;
+}
+
+.picker-button {
+    background-color: var(--white);
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 3vh;
+    height: 100%;
+    width: 30%;
+}
+
+.picker-button:hover {
+    background-color: var(--color-background);
+    transition: .6s;
+}
