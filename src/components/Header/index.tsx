@@ -23,7 +23,7 @@ function Header(){
                             </Link>
                         )}
 
-                    <Link to="/category">
+                    <Link to="/categoria">
                         <h3 className="category-title">PRODUTOS</h3>
                     </Link>
                 </div>
@@ -40,7 +40,7 @@ function Header(){
                         <h3 className="category-title-grey">PESQUISAR</h3>
                     </a>
 
-                    <Link to="/cart">
+                    <Link to="/carrinho">
                         <h3 className="category-title">CARRINHO(0)</h3>
                     </Link>
                 </div>

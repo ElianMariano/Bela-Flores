@@ -1,12 +1,13 @@
 import React, { ImgHTMLAttributes } from 'react';
+import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 
-// interface ImageItemProps {
-//     url: string;
-// };
-
-interface ImageItemProps extends ImgHTMLAttributes<HTMLImageElement> {
-    url: string;
+// Link: image, url: product
+interface ImageItemProps {
+    link: string;
+    hasLink: boolean;
+    url?: string;
+    description: string;
 };
 
 const Image = styled.img`
@@ -23,20 +24,17 @@ const ImageWrapper = styled.a`
     text-align: center;
 `;
 
-const ImageItem: React.FC<ImageItemProps> = ({ url, ...rest }) => {
-    return (
-        <ImageWrapper href={url}>
-            <Image {...rest} />
-        </ImageWrapper>
-    );
+const ImageItem: React.FC<ImageItemProps> = ({ link, hasLink, url, description }) => {
+    if (hasLink){
+        return (
+            <Link to={String(url)}>
+                <Image alt={description} src={link} />
+            </Link>
+        )
+    }
+    else{
+        return <Image alt={description} src={link} />;
+    }
 ;}
-
-// function ImageItem(props: ImageItemProps){
-//     return (
-//         <a href={props.url}>
-//             <Image />
-//         </a>
-//     );
-// }
 
 export default ImageItem;

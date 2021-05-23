@@ -13,12 +13,12 @@ function QuantityPicker(props: QuantityPickerProps){
     const [quantity, setQuantity] = useState(() => props.quantity !== undefined ? props.quantity : 1);
 
     function onMinus(){
-        if (quantity === 0)
-            props.onChange(0);
+        if (quantity === 1)
+            props.onChange(1);
         else
             props.onChange(quantity-1)
             
-        setQuantity(() => quantity === 0 ? 0 : quantity-1);
+        setQuantity(() => quantity === 1 ? 1 : quantity-1);
     }
 
     function onPlus(){

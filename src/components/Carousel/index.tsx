@@ -2,12 +2,20 @@ import React from 'react';
 import Slider from 'react-slick';
 import ImageItem from '../ImageItem';
 
-import Banner from '../../assets/banner.jpg';
-import Banner2 from '../../assets/banner2.jpg';
-import Banner3 from '../../assets/banner3.jpg';
 import './styles.css';
 
-function Carousel() {
+interface ImageItemProps {
+    link: string;
+    hasLink: boolean;
+    url?: string;
+    description: string;
+};
+
+interface CarouselProps{
+    slides: ImageItemProps[];
+}
+
+function Carousel(props: CarouselProps) {
     const settings = {
         dots: false,
         infinite: true,
@@ -22,9 +30,11 @@ function Carousel() {
     return (
         <div className="carousel-container">
             <Slider {...settings}>
-                <ImageItem url="/" src={Banner} alt="Banner1" />
-                <ImageItem url="/" src={Banner2} alt="Banner2" />
-                <ImageItem url="/" src={Banner3} alt="Banner3" />
+                {props.slides.map((slide, i) => {
+                    return (
+                        <ImageItem key={i} url={slide.url} hasLink={slide.hasLink} link={slide.link} description={slide.description} />
+                    )
+                })}
             </Slider>
         </div>
     );

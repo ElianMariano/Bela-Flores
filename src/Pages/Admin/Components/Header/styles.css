@@ -1,0 +1,33 @@
+.admin-header {
+    background-image: linear-gradient(rgb(231, 231, 231), rgb(233, 233, 233));
+    height: 20vh;
+    margin: 0;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.admin-title,
+.admin-orders{
+    margin: 6vh 3vh 3vh 3vh;
+}
+
+.admin-title {
+    color: var(--color-dark-green);
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 7vh;
+    float: left;
+    vertical-align: middle;
+}
+
+.admin-orders {
+    background-color: var(--color-primary);
+    color: var(--color-green);
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 5vh;
+    padding: 1vh 1vh 1vh 1vh;
+    border-radius: 5px;
+    float: right;
+    vertical-align: middle;
+}

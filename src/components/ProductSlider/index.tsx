@@ -1,11 +1,26 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import Slider from 'react-slick';
 import Product from '../Product';
 import ProductImg from '../../assets/produto.png';
 
 import './styles.css';
 
-function ProductSlider(){
+interface ProductProps{
+    url: string;
+    name: string;
+    src: string;
+    price: number;
+};
+
+interface ProductSliderProps{
+  category_url: string;
+  category: string;
+  products: ProductProps[];
+}
+
+
+function ProductSlider(props: ProductSliderProps){
     var settings = {
         dots: false,
         infinite: false,
@@ -43,92 +58,20 @@ function ProductSlider(){
 
     return (
         <div className="slider-container">
-            <a href="/"><h3 className="slider-title">Categoria</h3></a>
+            <Link to={props.category_url}><h3 className="slider-title">{props.category}</h3></Link>
 
             <Slider { ...settings }>
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
-
-                <Product
-                    url="/"
-                    title="Produto"
-                    price={20}
-                    src={ProductImg}
-                />
+                {props.products.map((product, i) => {
+                    return (
+                        <Product
+                            key={i}
+                            url={product.url}
+                            name={product.name}
+                            price={product.price}
+                            src={product.src}
+                        />
+                    )
+                })}
             </Slider>
         </div>
     );

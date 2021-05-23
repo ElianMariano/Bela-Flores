@@ -1,0 +1,32 @@
+.categoryform-container {
+    background-color: #efefef;
+    width: 70%;
+    height: 90%;
+    border-radius: 0.4vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vh 2vh 2vh 2vh;
+}
+
+.create-category-description {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 0.4vh;
+    color: var(--color-grey);
+    border-width: 0;
+    margin: 1.2vh 0 1.2vh 0;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    resize: vertical;
+}
+
+.create-category-title {
+    color: var(--color-account-title);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vh;
+    margin: 0 0 0 0;
+}
