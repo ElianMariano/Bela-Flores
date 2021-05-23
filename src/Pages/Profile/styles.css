@@ -1,0 +1,47 @@
+.profile-container {
+    background-color: var(--color-primary);
+    width: 90%;
+    border-radius: 0.8vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh 2vh 1vh 2vh;
+}
+
+.profile-title {
+    color: var(--color-account-title);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vh;
+    margin-bottom: 2vh;
+    float: left;
+}
+
+.logout-button {
+    float: right;
+    width: 200px;
+    height: 6vh;
+    background-color: var(--color-red);
+    border-width: 0;
+    color: var(--white);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0.7vh;
+    margin-bottom: 0.7vh;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border-radius: 1vh;
+    transition: .6s opacity;
+}
+
+.logout-button:hover {
+    opacity: 0.9;
+}
+
+/* .profile-container button {
+    margin-top: 2vh;
+    align-items: right;
+} */

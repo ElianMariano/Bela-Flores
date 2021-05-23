@@ -3,23 +3,37 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Home from './Pages/Home'
 import CreateAccount from './Pages/CreateAccount'
-import Account from './Pages/Account'
 import Cart from './Pages/Cart'
 import Category from './Pages/Category'
 import Login from './Pages/Login'
-import Product from './Pages/Product'
+import ProductPage from './Pages/ProductPage'
+import Profile from './Pages/Profile'
+import AdminPage from './Pages/Admin/Pages/AdminPage'
+import CreateCategory from './Pages/Admin/Pages/CategoryForm/CreateCategory'
+import CreateProduct from './Pages/Admin/Pages/ProductForm/CreateProduct'
+import CreateSlide from './Pages/Admin/Pages/SlideForm/CreateSlide'
+import EditCategory from './Pages/Admin/Pages/CategoryForm/EditCategory'
+import EditProduct from './Pages/Admin/Pages/ProductForm/EditProduct'
+import EditSlide from './Pages/Admin/Pages/SlideForm/EditSlide'
 
 function Routes(){
     return (
         <BrowserRouter>
             <Switch>
                 <Route component={Home} path="/" exact />
-                <Route component={CreateAccount} path="/create-account" />
-                <Route component={Account} path="/account" />
-                <Route component={Cart} path="/cart" />
-                <Route component={Category} path="/category" />
+                <Route component={CreateAccount} path="/cadastrar" />
+                <Route component={Cart} path="/carrinho" />
+                <Route component={Category} path="/categoria/:category" />
                 <Route component={Login} path="/login" />
-                <Route component={Product} path="/product" />
+                <Route component={ProductPage} path="/produto/:id" />
+                <Route component={Profile} path="/perfil" />
+                <Route component={AdminPage} path="/admin"/>
+                <Route component={CreateCategory} path="/criar-categoria" />
+                <Route component={CreateProduct} path="/criar-produto" />
+                <Route component={CreateSlide} path="/criar-slide" />
+                <Route component={EditCategory} path="/editar-categoria/:id" />
+                <Route component={EditProduct} path="/editar-produto/:id" />
+                <Route component={EditSlide} path="/editar-slide/:id" />
             </Switch>
         </BrowserRouter>
     )
