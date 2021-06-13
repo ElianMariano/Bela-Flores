@@ -37,12 +37,20 @@ function Login(){
         .then(res => {
             setAuth(res.headers.auth);
             setName(res.data.name);
-            setAdmin(res.data.admin)
+            if (res.data.admin === 1){setAdmin(true)} else if (res.data.admin === 0){setAdmin(false)}
 
             localStorage.setItem('name', res.data.name);
             localStorage.setItem('auth', res.headers.auth);
-            localStorage.setItem('admin', res.data.admin);
             localStorage.setItem('email', res.data.email);
+            if (res.data.admin === 1){
+                localStorage.setItem('admin', 'true');
+            } else if (res.data.admin === 0){
+                localStorage.setItem('admin', 'false');
+            }
+
+            // console.log("Admin");
+            // console.log(res.data.admin);
+            // console.log(localStorage.getItem('admin'));
 
             history.goBack();
         })

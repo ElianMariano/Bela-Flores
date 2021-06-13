@@ -10,13 +10,13 @@ function Admin(){
         const data = {
             auth: localStorage.getItem('auth'),
             name: localStorage.getItem('name'),
-            admin: Boolean(Number(localStorage.getItem('admin'))),
+            admin: localStorage.getItem('admin'),
             email: localStorage.getItem('email')
         }
 
-        console.log(data);
+        console.log(data)
 
-        if ((data.auth === null && data.name === null && data.admin === null && data.email === null) || !data.admin)
+        if ((data.auth === null && data.name === null && data.admin === null && data.email === null) || data.admin === 'false')
             history.push('/');
     }, [])
 
