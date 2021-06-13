@@ -20,10 +20,10 @@ function CreateCategory(){
             auth: localStorage.getItem('auth'),
             name: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
-            admin: Boolean(Number(localStorage.getItem('admin')))
+            admin: localStorage.getItem('admin')
         }
 
-        if ((data.auth === null && data.name === null && data.email === null && data.admin === null) || !data.admin){
+        if ((data.auth === null && data.name === null && data.email === null && data.admin === null) || data.admin === 'false'){
             history.push('/');
         }
 
