@@ -23,7 +23,7 @@ function Header(){
                             </Link>
                         )}
 
-                    <Link to="/categoria">
+                    <Link to="/produtos">
                         <h3 className="category-title">PRODUTOS</h3>
                     </Link>
                 </div>

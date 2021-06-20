@@ -8,6 +8,7 @@ import Category from './Pages/Category'
 import Login from './Pages/Login'
 import ProductPage from './Pages/ProductPage'
 import Profile from './Pages/Profile'
+import Products from './Pages/Products'
 import AdminPage from './Pages/Admin/Pages/AdminPage'
 import CreateCategory from './Pages/Admin/Pages/CategoryForm/CreateCategory'
 import CreateProduct from './Pages/Admin/Pages/ProductForm/CreateProduct'
@@ -28,6 +29,7 @@ function Routes(){
                 <Route component={ProductPage} path="/produto/:id" />
                 <Route component={Profile} path="/perfil" />
                 <Route component={AdminPage} path="/admin"/>
+                <Route component={Products} path="/produtos" />
                 <Route component={CreateCategory} path="/criar-categoria" />
                 <Route component={CreateProduct} path="/criar-produto" />
                 <Route component={CreateSlide} path="/criar-slide" />
